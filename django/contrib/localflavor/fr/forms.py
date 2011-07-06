@@ -9,7 +9,7 @@ from django.utils.encoding import smart_unicode
 from django.utils.translation import ugettext_lazy as _
 import re
 
-phone_digits_re = re.compile(r'^0\d(\s|\.)?(\d{2}(\s|\.)?){3}\d{2}$')
+phone_digits_re = re.compile(r'^0\d((\s|\.)?\d{2}){4}$')
 
 class FRZipCodeField(RegexField):
     default_error_messages = {
